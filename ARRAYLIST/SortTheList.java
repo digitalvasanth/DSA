@@ -18,6 +18,10 @@ public class SortTheList {
     System.out.println("After sort");
     System.out.println(list);
 
+    Collections.sort(list,Collections.reverseOrder());
+    System.out.println("reverse sort");
+    System.out.println(list);
+
     }
     
 }
