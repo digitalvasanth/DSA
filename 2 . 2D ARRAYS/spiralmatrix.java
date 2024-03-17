@@ -1,5 +1,5 @@
 import java.util.*;
-public class spiralmatrix {
+public class SpiralMatrix {
     public static void spiralprint(int arr[][]){
 
         int startRow=0;

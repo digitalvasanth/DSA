@@ -1,5 +1,5 @@
 import java.util.*;
-public class searchInSorted2dArray {
+public class SearchInRotatedSorted {
     public static void search(int arr[][],int key){
         int flag=0;
         int row=0;

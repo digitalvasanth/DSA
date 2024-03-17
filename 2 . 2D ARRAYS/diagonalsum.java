@@ -1,8 +1,5 @@
 import java.util.*;
-
-
-
-public class diagonalsum {
+public class DiagonalSum {
 
     public static void sum(int arr[][]){
         int sum=0;
@@ -20,7 +17,7 @@ public class diagonalsum {
             if(i!=arr.length-i-1)
                 sum+=arr[i][arr.length-i-1];
         }
-        System.out.println("sum is "+sum);
+        System.out.println("Sum is "+sum);
     }
 
 
