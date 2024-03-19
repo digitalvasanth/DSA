@@ -2,22 +2,24 @@ import java.util.*;
 public class SearchInRotatedSorted {
     public static void search(int arr[][],int key){
         int flag=0;
-        int row=0;
-        int column=arr[0].length-1;
 
-        while(row<arr.length&&column>=0){
-            if(arr[row][column]==key) {
-                System.out.print("Found key at " + row + "," + column);
-                flag=1;
-                break;
+        int row=0;
+        int col=arr.length-1;
+
+        while(row<arr.length&&col>=0){
+            if(arr[row][col]==key){
+            flag=1;
+            System.out.println("found at row "+row +" and column "+col);
+            break;
             }
-            else if(key<arr[row][column])
-                column--;
+            else if(key<arr[row][col])
+            col--;
             else
-                row++;
+            row++;
         }
-if(flag==0)
-    System.out.println("not found");
+        if(flag==0)
+        System.out.println("Not found");
+
     }
     public static void main(String[] args){
         int arr[][]={{10,20,30,40},
