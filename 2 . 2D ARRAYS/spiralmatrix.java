@@ -1,68 +1,64 @@
-import java.util.*;
-public class SpiralMatrix {
-    public static void spiralprint(int arr[][]){
 
-        int startRow=0;
-        int endRow=arr.length-1;
-        int startColumn=0;
-        int endColumn=arr[0].length-1;
+public class SpiralMatrix
 
-        while(startRow<=endRow&&startColumn<=endColumn){
-
-            //top
-            for(int i=startColumn;i<=endColumn;i++){
-                System.out.print(arr[startRow][i]+" ");
-            }
-
-            //right
-            for(int i=startRow+1;i<=endRow;i++){
-                System.out.print(arr[i][endColumn]+ " ");
-            }
-
-            //bottom
-            for(int i=endColumn-1;i>=startColumn;i--){
-
-                if(startRow==endRow)
-                    break;
-                System.out.print(arr[endRow][i]+" ");
-            }
-            //left
-            for(int i=endRow-1;i>=startRow+1;i--){
-                if(startColumn==endColumn)
-                    break;
-                System.out.print(arr[i][startColumn]+ " ");
-            }
-
-            startRow++;
-            startColumn++;
-            endRow--;
-            endColumn--;
+{
+    public static void printspiral(int arr[][])
+    {
+        int startrow=0;
+        int startcol=0;
+        int endrow=arr.length-1;
+        int endcol=arr[0].length-1;
 
 
+        while(startrow<=endrow&&startcol<=endcol){
+          
 
+        //top
+        for(int j=startcol;j<=endcol;j++)
+        {
+            System.out.print(arr[startrow][j]+" ");
+        }
+
+        //right
+        for(int i=startrow+1;i<=endrow;i++)
+        {
+        System.out.println(arr[i][endcol]);;
+        }
+
+       
+        //bottom
+        for(int j=endcol-1;j>=startcol;j--)
+        {
+            if(startrow==endrow)
+            break;
+            System.out.print(arr[endrow][j]+" ");
+        }
+
+        //left
+        for(int i=endrow-1;i>=startrow+1;i--)
+        {
+            if(startcol==endcol)
+            break;
+
+            System.out.print(arr[i][startcol]+" ");
         }
 
 
-
-
-
-
+        startrow++;
+        startcol++;
+        endrow--;
+        endcol--;
 
     }
-    public static void main(String[] args) {
-   int arr[][]={{1,2,3,4},
-           {5,6,7,8},
-           {9,10,11,12},
-           {13,14,15,16}
-
-
-
-
-
-   };
-
-
-
-   spiralprint(arr);
 }
+    public static void main(String []args)
+    {
+        int arr[][]={{1,2,3,4},
+                    {5,6,7,8},
+                    {9,10,11,12},
+    };
+
+                    printspiral(arr);
+
+    }
 }
