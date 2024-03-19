@@ -1,31 +1,31 @@
-import java.util.*;
 public class ShortestPath {
-    public static float shortpath(String s){
+  
+    public static int find(String path){
         int x=0;
         int y=0;
-        for(int i=0;i<s.length();i++){
-            char ch=s.charAt(i);
-            if(ch=='N')
-                y++;
-            else if(ch=='S')
-                y--;
-            else if(ch=='W')
-                x--;
-            else
-                x++;
+        for(int i=0;i<path.length();i++)
+        {
+            char letter=path.charAt(i);
+            if(letter=='S')
+            x--;
+            else if (letter=='N')
+            x++;
+            else if (letter=='E')
+            y++;
+            else 
+            y--;
 
         }
         int X2=x*x;
         int Y2=y*y;
-        float distance=(float)Math.sqrt(X2+Y2);
-
-return distance;
-
+        int ans=(int)Math.sqrt(X2+Y2);
+        return ans;
     }
-    public static void main(String [] args)
-    {
-      String path="WNEENESENNN";
-     float ans= shortpath(path);
-        System.out.println(ans);
-    }
+public static void main(String args[][])
+{
+    String path="WNEENESENNN";
+    System.out.println(find(path));
+}
+
+    
 }
