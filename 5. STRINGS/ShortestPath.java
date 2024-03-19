@@ -21,7 +21,7 @@ public class ShortestPath {
         int ans=(int)Math.sqrt(X2+Y2);
         return ans;
     }
-public static void main(String args[][])
+public static void main(String args[])
 {
     String path="WNEENESENNN";
     System.out.println(find(path));
