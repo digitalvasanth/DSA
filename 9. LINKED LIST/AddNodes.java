@@ -1,5 +1,5 @@
 import java.util.*;
-public class Add
+public class AddNodes
 {
 public static class Node
 {
@@ -33,7 +33,28 @@ head=newnode;
 
 }
 
+public void addmiddle(int index,int data)
+{
+    Node newnode=new Node(data);
 
+
+    if(index==0)
+    {
+        addfirst(data);
+        return;
+    }
+   int  i=0;
+   Node temp=head;
+   while(i<index-1){
+    temp=temp.next;
+    i++;
+   }
+   newnode.next=temp.next;
+   temp.next=newnode;
+  
+
+
+}
 public void addlast(int data)
 {
     Node newnode=new Node(data);
@@ -65,12 +86,14 @@ public static void print()
 }
 public static void main(String args[])
 {
-    Add ll=new Add();
+    AddNodes ll=new AddNodes();
 
     ll.addfirst(1);
     ll.addfirst(2);
     ll.addlast(23);
+    ll.addmiddle(1, 100);
     ll.addlast(44);
+    ll.addlast(332);
     print();
 
 
