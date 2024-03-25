@@ -15,7 +15,7 @@ public static void maxprofit(int prices[]){
     }
 
 
-    System.out.println("Maximum profit is "+maxprofit);
+    System.out.println("Maximum profit is    "+maxprofit);
 
 
 
