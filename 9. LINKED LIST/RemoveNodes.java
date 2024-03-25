@@ -95,6 +95,29 @@ public int removefirst()
     
   
 }
+public int removeLast()
+{
+    if(size==0)
+    {
+        System.out.println("List is Empty");
+        size=0;
+        return Integer.MIN_VALUE;
+    }
+    else if(size==1)
+    {
+        int val=head.data;
+        head=tail=null;
+        return val;
+    }
+    Node prev=head;
+    for(int i=0;i<size-2;i++){
+        prev=prev.next;
+    }
+    int val=prev.next.data;
+    prev.next=null;
+    tail=prev;
+    return val;
+}
 public static void print()
 {
     if(head==null){
@@ -124,8 +147,15 @@ public static void main(String args[])
     ll.addlast(332);
 
     print();
+    
     ll.removefirst();
+    System.out.println("First element removed");
     print();
+
+    ll.removeLast();
+    System.out.println("last elememt removed");
+    print();
+
 
 
 }
