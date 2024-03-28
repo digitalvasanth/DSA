@@ -31,22 +31,6 @@ public class IterativeSearch
 
     }
 
-    // public static void print()
-    // {Node temp=head;
-    //     if(head==null){
-    //     System.out.println("List is empty");
-    //     return;
-    //     }
-
-        
-    //     while(temp!=null)
-    //     {
-    //         System.out.println(temp.data+ " ");
-    //         temp=temp.next;
-    //     }
-    //     System.out.println();
-
-    // }
 
     public static void search(int key)
 
