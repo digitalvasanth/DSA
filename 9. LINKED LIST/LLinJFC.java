@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-
+//JFC- JAVA COLLECTION FRAMEWORK
 public class LLinJFC
 
 {

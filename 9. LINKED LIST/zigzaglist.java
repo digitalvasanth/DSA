@@ -1,5 +1,5 @@
-
-public class AddNodes
+import java.util.*;
+public class zigzaglist
 {
 public static class Node
 {
@@ -84,16 +84,37 @@ public static void print()
     System.out.println();
 
 }
+
+public static void zigzag()
+{
+Node slow=head;
+Node fast=head;
+
+while(fast!=null&&fast.next!=null)
+{
+    slow=slow.next;
+    fast=fast.next.next;
+}
+Node mid=slow;
+
+Node curr=mid.next;
+mid.next=null;
+
+}
+
 public static void main(String args[])
 {
-    AddNodes ll=new AddNodes();
+    zigzaglist ll=new zigzaglist();
 
-    ll.addfirst(1);
-    ll.addfirst(2);
-    ll.addlast(23);
-    ll.addmiddle(2,100);
-    ll.addlast(44);
-    ll.addlast(332);
+    ll.addlast(5);
+    ll.addlast(4);
+    ll.addlast(3);
+    ll.addlast(2);
+    ll.addlast(1);
+
+    
+    print();
+    zigzag();
     print();
 
 
